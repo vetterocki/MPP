@@ -1,1 +1,1 @@
-# MPP
+# MPP labs
