@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <windows.h>
-#include <stdlib.h>
-#include <time.h>
 
 #define ALPHABET_POWER 14
 #define ARRAY_SIZE 42
@@ -18,20 +16,15 @@ void generateMatrix(char chars[], char matrix[][ALPHABET_POWER]);
 
 int getCount(const char *chars, char from, char to);
 
-void generateRandomIntArray(int array[], int size);
-
 char alphabet[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G',
-                   'H','I', 'J', 'K', 'L', 'M', 'N',
+                   'H', 'I', 'J', 'K', 'L', 'M', 'N',
                    'O', 'P', 'Q', 'R', 'S', 'T',
                    'U', 'V', 'W', 'X', 'Y', 'Z'};
 
 int main() {
     setConsoleOutputUTF8();
-    
-    int array[ARRAY_SIZE] = {9, 1, 6, 7, 3, 4, 5, 10, 11, 12};
 
-    // comment it out if you want randim array generation
-    // generateRandomIntArray(array, 42);
+    int array[ARRAY_SIZE] = {9, 1, 6, 7, 3, 4, 5, 10, 11, 12};
 
     int sortedArray[ARRAY_SIZE];
     char intervalMap[ARRAY_SIZE];
@@ -58,13 +51,6 @@ void setConsoleOutputUTF8() {
     SetConsoleOutputCP(CP_UTF8);
 }
 
-void generateRandomIntArray(int array[], int size) {
-    srand(time(NULL)); // Seed the random number generator with the current time
-
-    for (int i = 0; i < size; i++) {
-        array[i] = rand() % 50;
-    }
-}
 
 void sortArray(const int array[], int sortedArray[]) {
     for (int i = 0; i < ARRAY_SIZE; i++) {
