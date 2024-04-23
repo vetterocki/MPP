@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <windows.h>
 
-#define ALPHABET_POWER 14
-#define ARRAY_SIZE 42
+#define ALPHABET_POWER 4
+#define ARRAY_SIZE 8
 
 void setConsoleOutputUTF8();
 
@@ -24,7 +24,7 @@ char alphabet[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G',
 int main() {
     setConsoleOutputUTF8();
 
-    int array[ARRAY_SIZE] = {9, 1, 6, 7, 3, 4, 5, 10, 11, 12};
+    int array[ARRAY_SIZE] = {9, 1, 6, 7, 3, 4, 5, 10};
 
     int sortedArray[ARRAY_SIZE];
     char intervalMap[ARRAY_SIZE];
